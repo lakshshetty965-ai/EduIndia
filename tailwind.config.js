@@ -1,11 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'class',
+  darkMode: 'class', // Enables toggling with "dark" class
   theme: {
     extend: {
       colors: {
-        // Enhanced color palette for EduIndia
         primary: {
           50: '#f8fafc',
           100: '#f1f5f9',
@@ -17,6 +16,7 @@ export default {
           700: '#334155',
           800: '#1e293b',
           900: '#0f172a',
+          dark: '#0f1a33', // Soft blue-black for dark mode
         },
         accent: {
           50: '#fafafa',
@@ -29,6 +29,22 @@ export default {
           700: '#3f3f46',
           800: '#27272a',
           900: '#18181b',
+          dark: '#1f2a3a', // Dark variant with blue hint
+        },
+        success: {
+          light: '#10b981',
+          DEFAULT: '#10b981',
+          dark: '#064e3b', // Dark emerald
+        },
+        warning: {
+          light: '#f97316',
+          DEFAULT: '#f97316',
+          dark: '#7c2d12', // Deep saffron shade
+        },
+        error: {
+          light: '#ff0080',
+          DEFAULT: '#ff0080',
+          dark: '#660033', // Deep crimson for dark mode
         },
         success: '#00d9ff',
         warning: '#ff6b35',
@@ -45,6 +61,7 @@ export default {
           700: '#c2410c',
           800: '#9a3412',
           900: '#7c2d12',
+          dark: '#4a1a00', // Deep saffron tone
         },
         emerald: {
           50: '#ecfdf5',
@@ -57,6 +74,20 @@ export default {
           700: '#047857',
           800: '#065f46',
           900: '#064e3b',
+          dark: '#032e1f', // Deep green
+        },
+        neutral: {
+          light: '#f9fafb',
+          DEFAULT: '#333333',
+          dark: '#0f1a33', // Soft dark blue-black
+        },
+        background: {
+          light: '#ffffff',
+          dark: '#0f1a33', // Background with blue tint
+        },
+        surface: {
+          light: '#f8fafc',
+          dark: '#1f2a3a', // Cards or panels dark tone
         },
       },
       fontFamily: {

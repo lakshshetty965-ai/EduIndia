@@ -25,7 +25,7 @@ const ProfilePage: React.FC = () => {
             <User className="text-white" size={32} />
           </div>
           <div className="ml-6 flex-1">
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white">John Doe</h2>
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Anmol Sakpal</h2>
             <p className="text-gray-600 dark:text-gray-400">Computer Science Student</p>
             <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">
               Joined January 2024 • Active Learner

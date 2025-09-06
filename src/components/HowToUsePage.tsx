@@ -116,7 +116,7 @@ const HowToUsePage: React.FC = () => {
           <img
             src={currentTutorial.visual}
             alt={getTitle()}
-            className="w-full h-48 object-cover"
+            className="w-full h-48 md:h-72 object-cover"
           />
           <div className="absolute top-4 left-4 w-12 h-12 bg-white bg-opacity-90 rounded-full flex items-center justify-center">
             <span className="text-2xl">{currentTutorial.icon}</span>
