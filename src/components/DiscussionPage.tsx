@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageSquare, Users, ThumbsUp, Reply, Search, Plus } from 'lucide-react';
+import { ThumbsUp, Reply, Search, Plus } from 'lucide-react';
 
 const DiscussionPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');

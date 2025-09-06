@@ -1,18 +1,35 @@
 import React, { useState } from 'react';
-import { Phone, Clock, Users, MessageSquare, Volume2, PhoneCall } from 'lucide-react';
+import { Phone, Clock, Users, PhoneCall } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+
+type SupportHour = {
+  day: string;
+  time: string;
+  timeHi: string;
+  timeRaj: string;
+};
+
+type CommonIssue = {
+  id: string;
+  title: string;
+  titleHi: string;
+  titleRaj: string;
+  description: string;
+  descriptionHi: string;
+  descriptionRaj: string;
+};
 
 const CallSupportPage: React.FC = () => {
   const [selectedIssue, setSelectedIssue] = useState('');
   const { t, language } = useLanguage();
 
-  const supportHours = [
+  const supportHours:SupportHour[] = [
     { day: 'Monday - Friday', time: '9:00 AM - 6:00 PM', timeHi: 'सुबह 9:00 - शाम 6:00', timeRaj: 'सुबह 9:00 - सांझ 6:00' },
     { day: 'Saturday', time: '10:00 AM - 4:00 PM', timeHi: 'सुबह 10:00 - शाम 4:00', timeRaj: 'सुबह 10:00 - सांझ 4:00' },
     { day: 'Sunday', time: 'Closed', timeHi: 'बंद', timeRaj: 'बंद' },
   ];
 
-  const commonIssues = [
+  const commonIssues:CommonIssue[] = [
     {
       id: 'video',
       title: 'Video Problems',
@@ -51,7 +68,7 @@ const CallSupportPage: React.FC = () => {
     }
   ];
 
-  const getTime = (schedule: any) => {
+  const getTime = (schedule: SupportHour) => {
     switch (language) {
       case 'hi': return schedule.timeHi;
       case 'raj': return schedule.timeRaj;
@@ -59,7 +76,7 @@ const CallSupportPage: React.FC = () => {
     }
   };
 
-  const getIssueTitle = (issue: any) => {
+  const getIssueTitle = (issue: CommonIssue) => {
     switch (language) {
       case 'hi': return issue.titleHi;
       case 'raj': return issue.titleRaj;
@@ -67,7 +84,7 @@ const CallSupportPage: React.FC = () => {
     }
   };
 
-  const getIssueDescription = (issue: any) => {
+  const getIssueDescription = (issue: CommonIssue) => {
     switch (language) {
       case 'hi': return issue.descriptionHi;
       case 'raj': return issue.descriptionRaj;

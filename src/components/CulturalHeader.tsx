@@ -1,5 +1,5 @@
 import React from 'react';
-import { Moon, Sun, Phone, Globe, Wifi, WifiOff } from 'lucide-react';
+import { Moon, Sun, Phone, Wifi, WifiOff } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage, Language } from '../contexts/LanguageContext';
 
@@ -35,7 +35,7 @@ const CulturalHeader: React.FC<CulturalHeaderProps> = ({ isOnline }) => {
             <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center shadow-md">
               <span className="text-white dark:text-black text-sm font-bold">E</span>
             </div>
-            <div>
+            <div className='hidden sm:block'>
               <h1 className="text-lg font-semibold text-black dark:text-white">{t('appName')}</h1>
               <p className="text-xs text-gray-500 dark:text-gray-400">{t('culturalGreeting')}</p>
             </div>

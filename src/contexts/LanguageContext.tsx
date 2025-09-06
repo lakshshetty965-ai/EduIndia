@@ -520,7 +520,7 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('hi'); // Default to Hindi
+  const [language, setLanguage] = useState<Language>('raj'); // Default to Rajasthani
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations.en] || key;

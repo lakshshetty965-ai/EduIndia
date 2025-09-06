@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Upload, Video, FileText, Settings, CheckCircle, Clock } from 'lucide-react';
+import { Upload, Video, CheckCircle, Clock } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const TeacherPanel: React.FC = () => {

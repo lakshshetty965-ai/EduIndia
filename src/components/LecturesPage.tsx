@@ -1,11 +1,31 @@
 import React, { useState } from 'react';
-import { Play, Download, Calendar, Clock, Users, Search, Filter, CheckCircle, Star, Wifi, WifiOff } from 'lucide-react';
+import { Play, Download, Calendar, Users, Search, Filter, CheckCircle, Star, Wifi, WifiOff } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { SAMPLE_LECTURES } from '../utils/constants';
 
 interface LecturesPageProps {
   isOnline: boolean;
 }
+
+type Lecture = {
+  id: number;
+  title: string;
+  titleHi: string;
+  titleRaj: string;
+  subject: string;
+  duration: string;
+  thumbnail: string;
+  description: string;
+  descriptionHi: string;
+  descriptionRaj: string;
+  date: string;
+  size: string;
+  downloaded: boolean;
+  essential: boolean;
+  views: number;
+  rating: string;
+  instructor: string;
+};
 
 const LecturesPage: React.FC<LecturesPageProps> = ({ isOnline }) => {
   const { t, language } = useLanguage();
@@ -100,7 +120,7 @@ const LecturesPage: React.FC<LecturesPageProps> = ({ isOnline }) => {
     }, 250);
   };
 
-  const getTitle = (lecture: any) => {
+  const getTitle = (lecture: Lecture) => {
     switch (language) {
       case 'hi': return lecture.titleHi;
       case 'raj': return lecture.titleRaj;
@@ -108,7 +128,7 @@ const LecturesPage: React.FC<LecturesPageProps> = ({ isOnline }) => {
     }
   };
 
-  const getDescription = (lecture: any) => {
+  const getDescription = (lecture: Lecture) => {
     switch (language) {
       case 'hi': return lecture.descriptionHi;
       case 'raj': return lecture.descriptionRaj;

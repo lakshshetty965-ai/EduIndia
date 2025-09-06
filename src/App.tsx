@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 import CulturalHeader from './components/CulturalHeader';
@@ -129,13 +129,13 @@ function App() {
                   onClick={() => setActiveTab('tutorial')}
                   className="px-4 py-2 bg-blue-500 text-white rounded-lg text-sm font-medium hover:bg-blue-600 transition-all duration-200 shadow-md hover:shadow-lg"
                 >
-                  📚 Tutorial
+                  Tutorial
                 </button>
                 <button
                   onClick={() => setActiveTab('offline')}
                   className="px-4 py-2 bg-purple-500 text-white rounded-lg text-sm font-medium hover:bg-purple-600 transition-all duration-200 shadow-md hover:shadow-lg"
                 >
-                  📱 Offline Mode
+                  Offline Mode
                 </button>
               </div>
             </div>

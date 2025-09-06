@@ -73,7 +73,7 @@ const CulturalChatbot: React.FC = () => {
     }
     
     // Default responses
-    const defaultResponses = {
+    const defaultResponses: Record<string, string[]> = {
       hi: [
         "मैं आपका प्रश्न समझ गया हूं। मैं इसमें आपकी मदद करने की कोशिश करता हूं।",
         "यह एक अच्छा प्रश्न है। मुझे लगता है कि मैं इसका उत्तर दे सकता हूं।",
@@ -157,7 +157,7 @@ const CulturalChatbot: React.FC = () => {
     return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   };
 
-  const getQuickActionText = (action: any) => {
+  const getQuickActionText = (action: { id:number, text: string, textHi: string, textRaj: string, icon: React.ElementType }) => {
     switch (language) {
       case 'hi': return action.textHi;
       case 'raj': return action.textRaj;

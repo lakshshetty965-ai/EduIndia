@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Download, Wifi, WifiOff, HardDrive, CheckCircle, Clock } from 'lucide-react';
+import { Download, WifiOff, HardDrive, CheckCircle, Clock } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { SAMPLE_LECTURES } from '../utils/constants';
 

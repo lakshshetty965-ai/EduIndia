@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Download, Upload, MessageCircle, Phone, ChevronRight, ChevronLeft, Volume2 } from 'lucide-react';
+import { Download, Phone, ChevronRight, ChevronLeft, Volume2 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const HowToUsePage: React.FC = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, BookOpen, FileText, MessageSquare, User, Phone } from 'lucide-react';
+import { Home, BookOpen, FileText, User, Phone } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface CulturalNavigationProps {
